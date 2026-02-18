@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+
+# Data (never commit personal ChatGPT data)
+manifest.yaml
+output*/
+*.html

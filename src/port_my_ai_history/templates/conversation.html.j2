@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>{{ css }}</style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div class="metadata">
+        {% if created %}Created: {{ created }} UTC{% endif %}
+        {% if model %} &middot; Model: {{ model }}{% endif %}
+    </div>
+
+    {% for message in messages %}
+    <div class="message message-{{ message.role }}">
+        <div class="role-label">{{ message.label }}</div>
+        <div class="content">
+            {% for block in message.blocks %}
+                {{ block }}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "port-my-ai-history"
+version = "0.1.0"
+description = "Convert ChatGPT data exports into portable Markdown or PDF documents"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Aziz Kara" }]
+keywords = ["chatgpt", "export", "markdown", "pdf", "ai-history"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Markup",
+]
+
+dependencies = [
+    "click>=8.0",
+    "ruamel.yaml>=0.18",
+    "rich>=13.0",
+    "Pillow>=10.0",
+    "pygments>=2.17",
+]
+
+[project.optional-dependencies]
+pdf = [
+    "jinja2>=3.1",
+    "weasyprint>=60",
+    "markdown>=3.5",
+]
+
+[project.scripts]
+port-my-ai-history = "port_my_ai_history.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
