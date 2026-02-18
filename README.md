@@ -81,11 +81,11 @@ Or just leave it as-is and everything goes into `_unsorted/`.
 
 ### 3. Categorize (optional)
 
-If you have the Claude CLI installed and authenticated with your own account, you can auto-categorize conversations into projects:
+If you have the Claude CLI installed and authenticated with your own account, you can auto-categorize conversations into projects. Use `--projects` and include the project names you had in ChatGPT — this lets the tool replicate the same structure you were already using:
 
 ```bash
 port-my-ai-history categorize \
-  --projects "Project A, Project B, Project C" \
+  --projects "Home Maintenance, Coding, Health and Fitness" \
   --export-dir /path/to/export
 ```
 
